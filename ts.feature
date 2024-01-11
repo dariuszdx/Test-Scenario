@@ -1,4 +1,4 @@
-Feature: Search and filter
+Feature: Search and filter on bing.com to collect information about "Prowly Media Monitoring"
 
   Scenario: Search for "Prowly Media Monitoring" by news category
     Given I am on the search page of bing.com
@@ -26,3 +26,30 @@ Feature: Search and filter
       | News     |
       | Video    |
       | All      |
+
+      
+Feature: Use AI Chat on bing.com to collect information about "Prowly media monitoring module"
+
+  Scenario: Initiate precise chat with copilot for "Prowly media monitoring module"
+    Given I am on the search page of bing.com
+    When I initiate a conversation with Copilot in a precise style
+    And I ask for details about the "Prowly media monitoring module"
+    Then Copilot should respond precise with technical details, system requirements, and compatibility information
+
+  Scenario: Initiate balanced chat with copilot for "Prowly media monitoring module"
+    Given I am on the Bing.com search page
+    When I initiate a chat with Copilot using a balanced style
+    And I ask for information about the "Prowly media monitoring module"
+    Then Copilot should respond in a balanced and approachable style
+
+  Scenario: Initiate creative chat with copilot for "Prowly media monitoring module"
+    Given I am on the Bing.com search page
+    When I initiate a chat with Copilot using a creative style
+    And I seek detailed technical specifications and integration options for the "Prowly media monitoring module"
+    Then Copilot should respond with appropriate information
+
+    Examples:
+      | Style   |
+      | Precise |
+      | Balanced|
+      | Creative|
